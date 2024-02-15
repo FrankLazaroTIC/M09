@@ -1,0 +1,324 @@
+/*
+Menú
+*/
+html,body {
+    margin:0;
+    padding:0;
+    
+    
+}
+nav{
+    background-color: black;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 33;
+}
+nav div{
+    float: right;
+}
+nav div:hover{
+    height: 20px;
+    background-color: #444;
+}
+
+nav a{
+    color: aliceblue;
+    font-family:verdana;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+nav a:hover{
+    text-decoration: underline;
+    background-color: #444;
+}
+
+/*
+Header
+*/
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(Header.jpg);
+    background-position: 50% 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 20px; 
+    height: 300px;
+    
+}
+
+h1.titol{
+  color: aliceblue;
+  padding-left: 40%;
+}
+
+p.titol{
+    color: aliceblue;
+    padding-left: 40%;
+}
+
+/*
+Main
+*/
+
+main{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+h2{
+    float: center;
+    text-align: left;
+}
+
+div.nikebox1{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+img.nike1{
+    order: -1;
+}
+p.NikeText1{
+    margin-left: 2%;
+}
+
+div.nikebox2{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+} 
+
+img.nike2{
+    order: 1;
+}
+p.NikeText2{
+    margin-right: 2%;
+}
+
+@media only screen and (max-width: 800px){
+    main{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    h2{
+        float: center;
+        text-align: left;
+    }
+    
+    div.nikebox1,
+    div.nikebox2 {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    img.nike1,
+    img.nike2 {
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    
+    p.NikeText1,
+    p.NikeText2 {
+        text-align: justify;
+    }
+}
+
+/*
+Menu
+*/
+
+
+div.menu{
+    background-color: #444;
+    height:60px;
+    border-radius:22px;
+}
+h2.menu{
+    color: white;
+    padding-top: 0.5em;
+    text-align: center;
+}
+
+div.grid-container {
+  display: grid;
+  grid-template-columns: 15% 40% 40%;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item1{
+    grid-row: 1 / span 2;
+    border-style:solid;
+    border-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 h3 {
+    margin: 0;
+}
+
+.item2{
+    grid-column: 2 /span 4;
+}
+.item3{
+    grid-row: 2;
+    grid-column: 2 / span 1;
+}
+.item4{
+    grid-row: 2;
+    grid-column: 3 / span 2;
+}
+
+.item3 img,
+.item4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+
+    div.grid-container {
+        display: grid;
+        grid-template-columns: 15% 40%;
+        gap: 10px;
+        padding: 10px;
+      }
+      
+    .item1{
+        grid-row: 1 / span 4;
+        border-style:solid;
+        border-color: #444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .item1 h3 {
+        margin: 0;
+    }
+    
+    .item2{
+        grid-column: 2 /span 2;
+    }
+    .item3{
+        grid-row: 2;
+        grid-column: 2 / span 2;
+    }
+    .item4{
+        grid-row: 3;
+        grid-column: 2 / span 2;
+    }
+    
+    .item3 img,
+    .item4 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+}
+
+/*
+Galeria d'imatges
+*/
+
+div.flexImatges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.flexImatges div {
+    margin: 3px;
+    width: 23%;
+}
+
+div.flexImatges div img {
+    width: 100%;
+    display: block;
+    border: 2px solid black;
+}
+
+div.flexImatges div:hover img {
+    filter: brightness(0.7);
+}
+
+div.flexImatges div:nth-child(1),
+div.flexImatges div:nth-child(4),
+div.flexImatges div:nth-child(5),
+div.flexImatges div:nth-child(8) {
+    filter: brightness(0.7);
+}
+
+div.flexImatges div:hover {
+    border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    div.flexImatges {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    div.flexImatges div {
+        margin: 3px;
+        width: 45%;
+    }
+    
+    div.flexImatges div img {
+        width: 100%;
+        display: block;
+        border: 2px solid black;
+    }
+    
+    div.flexImatges div:hover img {
+        filter: brightness(0.7);
+    }
+    
+    div.flexImatges div:nth-child(1),
+    div.flexImatges div:nth-child(4),
+    div.flexImatges div:nth-child(5),
+    div.flexImatges div:nth-child(8) {
+        filter: brightness(0.7);
+    }
+    
+    div.flexImatges div:hover {
+        border: 2px solid black;
+    }
+}
+
+/*
+Footer
+*/
+
+footer {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
+
+p.enllaç{
+    text-align: left;
+    color: white;
+}
+p.tel{
+    text-align: left;
+}
+p.nikeFooter{
+    text-align: right;
+}
